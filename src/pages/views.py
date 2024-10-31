@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Page, PageCategory, PageTag
+from .models import Page, PageCategory, PageTag, Slide
 
 def page_detail(request, slug):
     page = get_object_or_404(Page, slug=slug)
@@ -17,4 +17,7 @@ def tag_detail(request, slug):
     pages = tag.pages.all()
     return render(request, 'pages/tag_detail.html', {'tag': tag, 'pages': pages})
 
+""" def slide(request):
+    slides = Slide.objects.order_by('order')  # ดึงสไลด์สามรายการล่าสุด
+    return render(request, 'pages/slide.html', {'slides': slides}) """
     

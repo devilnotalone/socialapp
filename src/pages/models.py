@@ -96,7 +96,7 @@ def auto_delete_file_on_delete(sender, instance, **kwargs):
             
 # สร้าง slide 
 class Slide(models.Model):
-    title = models.CharField(max_length=200, blank=True, null=True)  # ชื่อสไลด์
+    title = models.CharField(max_length=200, null=False)  # ชื่อสไลด์
     description = models.TextField(blank=True, null=True)  # คำอธิบายสไลด์
     image = models.ImageField(upload_to=get_slide_upload_path, blank=True, null=True)
     link = models.URLField(max_length=200, blank=True, null=True)  # ฟิลด์สำหรับลิงก์

@@ -17,7 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
-
 from . import views
 
 urlpatterns = [
@@ -25,9 +24,9 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('page/', include('pages.urls')),
     path('news/', include('news.urls')),
-    path('tinymce/', include('tinymce.urls')),  # เส้นทางสำหรับ TinyMCE
-    
-   
+    path('tinymce/', include('tinymce.urls')),  # เส้นทางสำหรับ TinyMCE  
+    path('accounts/', include('allauth.urls')),   
+       
 ]
 if settings.DEBUG:
      from django.conf.urls.static import static

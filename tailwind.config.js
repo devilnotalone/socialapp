@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bai: ["Bai Jamjuree", "sans-serif"],
+        anu: ["Anuphan", "sans-serif"],
       },
     },
   },
