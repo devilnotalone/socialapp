@@ -25,6 +25,7 @@ urlpatterns = [
     path('page/', include('pages.urls')),
     path('news/', include('news.urls')),
     path('tinymce/', include('tinymce.urls')),  # เส้นทาง
+    path('accounts/', include('accounts.urls')),
        
 ]
 if settings.DEBUG:
