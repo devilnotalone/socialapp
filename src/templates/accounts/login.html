@@ -1,0 +1,7 @@
+<!-- templates/accounts/login.html -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.email.label }} {{ form.email }}<br>
+    {{ form.password.label }} {{ form.password }}<br>
+    <button type="submit">Login</button>
+</form>

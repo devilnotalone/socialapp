@@ -24,8 +24,7 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('page/', include('pages.urls')),
     path('news/', include('news.urls')),
-    path('tinymce/', include('tinymce.urls')),  # เส้นทางสำหรับ TinyMCE  
-    path('accounts/', include('allauth.urls')),   
+    path('tinymce/', include('tinymce.urls')),  # เส้นทาง
        
 ]
 if settings.DEBUG:
