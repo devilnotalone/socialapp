@@ -12,13 +12,13 @@
       {% block head_title %}Faculty of Social Sciences : CRRU{% endblock %}
     </title>
   </head>
-  <body>
+  <body class='font-anu'>
     <!-- ส่วนเมนู -->
     {% include 'site/nav.html' %}
     <!-- ส่วนหัว -->
     {% include 'site/slide.html' %}
     <!-- ส่วนเนื้อหา -->
-    <div>{% block content %} {% endblock %}</div>
+    {% block content %} {% endblock %}
     <!-- ส่วนล่าง -->
     {% include 'site/footer.html' %}
     <script

@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'news',
     'course',
     'student',
-    'accounts'
+    'accounts',
+    'mediafile'
     
 ]
 
