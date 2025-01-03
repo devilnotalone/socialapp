@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+// Import Bootstrap
+
+$font-family-sans-serif: 'Bai Jamjuree', sans-serif;
+$font-family-base: 'Bai Jamjuree', sans-serif;
+
+// ปรับแต่งค่าของ padding scale
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4,
+  7: $spacer * 5,
+  8: $spacer * 6,
+  9: $spacer * 7,
+  10: $spacer * 8,
+  11: $spacer * 9,
+  12: $spacer * 10,
+  13: $spacer * 11,
+  14: $spacer * 12,
+  15: $spacer * 13,
+);
+
+// นำค่าที่กำหนดไปสร้าง utilities ใหม่
+@import './bootstrap/bootstrap';

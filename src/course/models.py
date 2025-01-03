@@ -7,7 +7,7 @@ class Major(models.Model):
     def __str__(self):
         return self.name
 
-class Program(models.Model):
+class Department(models.Model):
     name = models.CharField(max_length=250)
     major = models.ForeignKey(Major, on_delete=models.CASCADE, default=1)
 
@@ -21,11 +21,12 @@ class Degree(models.Model):
     def __str__(self):
         return self.name
     
-class Course(models.Model):
+class Program (models.Model):
     name = models.CharField(max_length=250)
-    program = models.ForeignKey(Program, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
     degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
 
+ 

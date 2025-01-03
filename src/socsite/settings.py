@@ -53,7 +53,9 @@ INSTALLED_APPS = [
     'course',
     'student',
     'accounts',
-    'mediafile'
+    'mediafile',
+    
+    'compressor',
     
 ]
 
@@ -146,15 +148,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-  BASE_DIR / "static",
-  BASE_DIR.parent / "node_modules",
+STATICFILES_FINDERS = [
+    'compressor.finders.CompressorFinder',
 ]
-STATIC_ROOT = BASE_DIR.parent / "static"
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+  os.path.join(BASE_DIR, "static")
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = 'media/'
-# MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
